@@ -2,18 +2,18 @@
 
 Bash script that installs and setups IPFS for RaspberryPi OS Lite on RaspberryPi Zero W.
 
-- View script: [setup_ipfs.sh](./setup_ipfs.sh)
+- View script: [ipfs-rpizero.sh](./ipfs-rpizero.sh)
 
 ## How To Install
 
-1. Get a brand new installed Raspberry Pi OS Lite. (No GUI!)
+1. Get a brand new installed Raspberry Pi OS Lite (with no GUI) micro SD card.
    1. See the prerequisites below.
 2. Update, upgrade apk packages and upgrade kernel to the latest as well.
 3. SSH to your RaspberryPi Zero W.
 4. Go home.
 5. Create a file, copy and paste the [script](setup_ipfs.sh).
-6. Give access to the script. (`chmod +x setup_ipfs.sh`)
-7. Run the script. (`./setup_ipfs.sh`)
+6. Give access to the script. (`chmod +x ipfs-rpizero.sh`)
+7. Run the script. (`./ipfs-rpizero.sh`)
 8. Reboot now. (`sudo reboot now`)
 
 ### Prerequisites
@@ -23,19 +23,21 @@ Bash script that installs and setups IPFS for RaspberryPi OS Lite on RaspberryPi
 1. Change host name from `raspberrypi` to other, if necessary. (Recommended though)
 1. Set disk swap size to 2GB.
 1. Change your `pi` user password.
-1. Set SSH settings to login with private key. (Send your public key to `~/.ssh/7nown_hosts`)
+1. Set SSH settings to login with private key. (Send your public key to `~/.ssh/known_hosts`)
 1. Disable SSH pasword login and root user login.
 1. Disable all exposed ports except: SSH(22) and IPFS(4001).
 
 ## How To Run IPFS Daemon
 
-- `./setup_ipfs.sh run`
+- `./ipfs-rpizero.sh run`
 
 ## How To Uninstall
 
-- `./setup_ipfs.sh uninstall`
+- `./ipfs-rpizero.sh uninstall`
 
-## How To Check Status of IPFS Daemon
+## How To Check Status of IPFS Daemon (Access to IPFS Web UI)
+
+- `./run-webui.sh`
 
 IPFS Daemon contains a built-in Web server to monitor the status from the Web browser.
 
