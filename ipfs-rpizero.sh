@@ -85,7 +85,7 @@ which ipfs 2>/dev/null 1>/dev/null || {
 }
 
 # Smoke test
-echo "IPFS Version: $(ipfs --version 2>&1)"
+echo "IPFS Version: $(sudo -u ipfs ipfs --version 2>&1)"
 
 # -----------------------------------------------------------------------------
 #  Setup
