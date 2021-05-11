@@ -31,6 +31,10 @@ Bash script that installs and setups IPFS for RaspberryPi OS Lite on RaspberryPi
 
 - `./ipfs-rpizero.sh run`
 
+To run the IPFS daemon background:
+
+- `nohup ./ipfs-rpizero.sh run`
+
 ## How To Uninstall
 
 - `./ipfs-rpizero.sh uninstall`

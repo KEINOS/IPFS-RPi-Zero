@@ -131,6 +131,9 @@ echo 'Installation and setup for IPFS done.'
 #  Run IPFS daemon
 # -----------------------------------------------------------------------------
 echo "$@" | grep 'run' 1>/dev/null 2>/dev/null && {
+    echo 'Set max buffer to 1024 MB'
+    sudo sysctl -w net.core.rmem_max=2097152
+
     echo 'Running IPFS daemon ...'
     sudo -u ipfs \
         IPFS_PATH="$IPFS_PATH" \
